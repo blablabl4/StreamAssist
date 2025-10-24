@@ -1,0 +1,43 @@
+{
+  "name": "bot-iptv-paghiper",
+  "version": "1.0.0",
+  "description": "Bot de WhatsApp para venda automática de IPTV com pagamento via PIX pela PagHiper",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "explore-iptv": "node scripts/exploreIPTV.js",
+    "test-paghiper": "node scripts/testPagHiper.js",
+    "test-login": "node scripts/testLogin.js",
+    "test:recaptcha": "node scripts/testRecaptcha.js",
+    "map:interface": "node scripts/mapearInterface.js",
+    "debug:login": "node scripts/debugLogin.js",
+    "test:captcha-solver": "node scripts/testCaptchaSolver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "iptv",
+    "paghiper",
+    "pix",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "2captcha": "^3.0.5-2",
+    "axios": "^1.11.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^21.11.0",
+    "qrcode-terminal": "^0.12.0",
+    "sqlite3": "^5.1.6",
+    "whatsapp-web.js": "^1.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "basic",
+    "name": "Básico",
+    "price": 15.00,
+    "connections": 1,
+    "description": "1 conexão, canais SD/HD, suporte básico"
+  },
+  {
+    "id": "premium",
+    "name": "Premium",
+    "price": 25.00,
+    "connections": 2,
+    "description": "2 conexões, canais HD, suporte prioritário"
+  },
+  {
+    "id": "familia",
+    "name": "Família",
+    "price": 35.00,
+    "connections": 3,
+    "description": "3 conexões, canais HD/4K, suporte família"
+  },
+  {
+    "id": "vip",
+    "name": "VIP",
+    "price": 50.00,
+    "connections": 5,
+    "description": "5 conexões, todos canais, suporte VIP"
+  }
+]

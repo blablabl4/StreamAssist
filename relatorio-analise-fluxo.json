@@ -1,0 +1,1382 @@
+{
+  "timestamp": "2025-08-14T22:53:25.324Z",
+  "comandosTexto": [
+    {
+      "linha": 28,
+      "conteudo": "if (message.from.includes('@g.us') || message.from.includes('status@broadcast')) {",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 53,
+      "conteudo": "const userState = this.userStates.get(telefone) || { step: 'menu' };",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 56,
+      "conteudo": "const planosMap = {",
+      "comandos": [
+        "planos"
+      ]
+    },
+    {
+      "linha": 63,
+      "conteudo": "if (planosMap[texto]) {",
+      "comandos": [
+        "planos"
+      ]
+    },
+    {
+      "linha": 64,
+      "conteudo": "const planoTipo = planosMap[texto];",
+      "comandos": [
+        "planos"
+      ]
+    },
+    {
+      "linha": 73,
+      "conteudo": "Idem.set(cob.txid, { telefone, plano: planoTipo, pacote: 2, status: 'pending' });",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 88,
+      "conteudo": "await this.enviarMensagem(telefone, `Não foi possível gerar o PIX. ${cob?.error ? '('+cob.error+')' : ''}`);",
+      "comandos": [
+        "Não",
+        "oi"
+      ]
+    },
+    {
+      "linha": 112,
+      "conteudo": "const credenciaisParaSalvar = {",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 122,
+      "conteudo": "const salvou = this.credentials.saveCredentials(telefone, credenciaisParaSalvar, 'teste');",
+      "comandos": [
+        "credenciais",
+        "teste"
+      ]
+    },
+    {
+      "linha": 137,
+      "conteudo": "if (texto.startsWith('txid ')) {",
+      "comandos": [
+        "start"
+      ]
+    },
+    {
+      "linha": 146,
+      "conteudo": "Idem.set(txid, { telefone, status: 'pending' });",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 152,
+      "conteudo": "if (texto === 'sim' || texto === 'paguei' || texto === '1') {",
+      "comandos": [
+        "sim"
+      ]
+    },
+    {
+      "linha": 156,
+      "conteudo": "await this.enviarMensagem(telefone, 'Não encontrei seu transaction_id. Envie: TXID <transaction_id>');",
+      "comandos": [
+        "Não"
+      ]
+    },
+    {
+      "linha": 162,
+      "conteudo": "if (existing && existing.status === 'processed') {",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 164,
+      "conteudo": "await this.enviarMensagem(telefone, 'Esta transação já foi processada anteriormente.');",
+      "comandos": [
+        "oi"
+      ]
+    },
+    {
+      "linha": 169,
+      "conteudo": "this.audit.paymentCheckStarted(st.transactionId, telefone, 5);",
+      "comandos": [
+        "Start"
+      ]
+    },
+    {
+      "linha": 182,
+      "conteudo": "Idem.set(st.transactionId, { ...(Idem.get(st.transactionId) || {}), telefone, status: 'paid' });",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 192,
+      "conteudo": "Idem.set(st.transactionId, { ...(Idem.get(st.transactionId) || {}), status: 'processed' });",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 196,
+      "conteudo": "const credenciaisParaSalvar = {",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 206,
+      "conteudo": "const salvou = this.credentials.saveCredentials(telefone, credenciaisParaSalvar, 'oficial');",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 218,
+      "conteudo": "await this.enviarMensagem(telefone, 'Pagamento confirmado, mas houve um erro técnico. Nossa equipe foi notificada.');",
+      "comandos": [
+        "oi"
+      ]
+    },
+    {
+      "linha": 227,
+      "conteudo": "if (texto === 'não' || texto === 'nao' || texto === '2') {",
+      "comandos": [
+        "não",
+        "nao"
+      ]
+    },
+    {
+      "linha": 236,
+      "conteudo": "await this.mostrarMenu(telefone);",
+      "comandos": [
+        "Menu"
+      ]
+    },
+    {
+      "linha": 237,
+      "conteudo": "this.userStates.set(telefone, { step: 'menu' });",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 243,
+      "conteudo": "await this.mostrarPlanos(telefone);",
+      "comandos": [
+        "Planos"
+      ]
+    },
+    {
+      "linha": 250,
+      "conteudo": "await this.mostrarSuporte(telefone);",
+      "comandos": [
+        "Suporte"
+      ]
+    },
+    {
+      "linha": 256,
+      "conteudo": "await this.mostrarStatus(telefone, cliente.id);",
+      "comandos": [
+        "Status"
+      ]
+    },
+    {
+      "linha": 262,
+      "conteudo": "await this.mostrarPlanos(telefone, true);",
+      "comandos": [
+        "Planos"
+      ]
+    },
+    {
+      "linha": 263,
+      "conteudo": "this.userStates.set(telefone, { step: 'renovar_plano' });",
+      "comandos": [
+        "renovar"
+      ]
+    },
+    {
+      "linha": 270,
+      "conteudo": "this.userStates.set(telefone, { step: 'escolher_tutorial' });",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 275,
+      "conteudo": "if (texto === 'menu' || texto === 'início' || texto === 'start' || texto === 'oi' || texto === 'olá') {",
+      "comandos": [
+        "menu",
+        "início",
+        "start",
+        "oi",
+        "olá"
+      ]
+    },
+    {
+      "linha": 276,
+      "conteudo": "await this.mostrarMenu(telefone);",
+      "comandos": [
+        "Menu"
+      ]
+    },
+    {
+      "linha": 277,
+      "conteudo": "this.userStates.set(telefone, { step: 'menu' });",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 284,
+      "conteudo": "if (userState.step === 'escolher_plano' || userState.step === 'renovar_plano') {",
+      "comandos": [
+        "renovar"
+      ]
+    },
+    {
+      "linha": 285,
+      "conteudo": "await this.processarSelecaoPlano(telefone, texto, cliente, userState.step === 'renovar_plano');",
+      "comandos": [
+        "renovar"
+      ]
+    },
+    {
+      "linha": 290,
+      "conteudo": "if (userState.step === 'escolher_tutorial') {",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 291,
+      "conteudo": "await this.processarSelecaoTutorial(telefone, texto);",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 297,
+      "conteudo": "await this.processarOpcaoInstalacao(telefone, texto, userState.tipoTv);",
+      "comandos": [
+        "oI"
+      ]
+    },
+    {
+      "linha": 303,
+      "conteudo": "'❓ Comando não reconhecido.\\n\\nDigite *0* para ver o menu de opções disponíveis.'",
+      "comandos": [
+        "não",
+        "menu"
+      ]
+    },
+    {
+      "linha": 307,
+      "conteudo": "async mostrarMenu(telefone) {",
+      "comandos": [
+        "Menu"
+      ]
+    },
+    {
+      "linha": 308,
+      "conteudo": "const menu = `🎬 *BEM-VINDO AO IPTV BOT* 🎬",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 312,
+      "conteudo": "1️⃣ *PLANOS* - Ver planos disponíveis",
+      "comandos": [
+        "PLANOS",
+        "planos"
+      ]
+    },
+    {
+      "linha": 313,
+      "conteudo": "2️⃣ *SUPORTE* - Falar com atendimento",
+      "comandos": [
+        "SUPORTE"
+      ]
+    },
+    {
+      "linha": 314,
+      "conteudo": "3️⃣ *STATUS* - Verificar sua assinatura",
+      "comandos": [
+        "STATUS"
+      ]
+    },
+    {
+      "linha": 315,
+      "conteudo": "4️⃣ *RENOVAR* - Renovar assinatura",
+      "comandos": [
+        "RENOVAR",
+        "Renovar"
+      ]
+    },
+    {
+      "linha": 317,
+      "conteudo": "6️⃣ *CREDENCIAIS* - Ver seus logins IPTV",
+      "comandos": [
+        "CREDENCIAIS"
+      ]
+    },
+    {
+      "linha": 318,
+      "conteudo": "7️⃣ *TESTE GRÁTIS* - Conta teste limitada",
+      "comandos": [
+        "TESTE",
+        "teste"
+      ]
+    },
+    {
+      "linha": 323,
+      "conteudo": "💡 *Dica:* Digite *0* para voltar ao menu principal.`;",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 325,
+      "conteudo": "await this.enviarMensagem(telefone, menu);",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 328,
+      "conteudo": "async mostrarPlanos(telefone, isRenovacao = false) {",
+      "comandos": [
+        "Planos"
+      ]
+    },
+    {
+      "linha": 329,
+      "conteudo": "const titulo = isRenovacao ? '🔄 *RENOVAÇÃO DE ASSINATURA*' : '📺 *ZielIPTV - PLANOS DISPONÍVEIS*';",
+      "comandos": [
+        "PLANOS"
+      ]
+    },
+    {
+      "linha": 331,
+      "conteudo": "const planos = `${titulo}",
+      "comandos": [
+        "planos"
+      ]
+    },
+    {
+      "linha": 336,
+      "conteudo": "1️⃣ *CONTA TESTE* - GRÁTIS",
+      "comandos": [
+        "TESTE"
+      ]
+    },
+    {
+      "linha": 337,
+      "conteudo": "✅ Teste gratuito por tempo limitado",
+      "comandos": [
+        "Teste"
+      ]
+    },
+    {
+      "linha": 341,
+      "conteudo": "⚠️ *Limitação:* 1 teste por cliente a cada 60 dias",
+      "comandos": [
+        "teste"
+      ]
+    },
+    {
+      "linha": 366,
+      "conteudo": "✅ Suporte prioritário",
+      "comandos": [
+        "Suporte"
+      ]
+    },
+    {
+      "linha": 372,
+      "conteudo": "📝 Digite *0* para voltar ao menu principal`;",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 374,
+      "conteudo": "await this.enviarMensagem(telefone, planos);",
+      "comandos": [
+        "planos"
+      ]
+    },
+    {
+      "linha": 377,
+      "conteudo": "async mostrarSuporte(telefone) {",
+      "comandos": [
+        "Suporte"
+      ]
+    },
+    {
+      "linha": 378,
+      "conteudo": "const suporte = `🆘 *SUPORTE TÉCNICO* 🆘",
+      "comandos": [
+        "suporte",
+        "SUPORTE"
+      ]
+    },
+    {
+      "linha": 382,
+      "conteudo": "• Telegram: @suporte_iptv",
+      "comandos": [
+        "suporte"
+      ]
+    },
+    {
+      "linha": 383,
+      "conteudo": "• Email: suporte@iptv.com",
+      "comandos": [
+        "suporte"
+      ]
+    },
+    {
+      "linha": 394,
+      "conteudo": "⬅️ Digite *MENU* para voltar`;",
+      "comandos": [
+        "MENU"
+      ]
+    },
+    {
+      "linha": 396,
+      "conteudo": "await this.enviarMensagem(telefone, suporte);",
+      "comandos": [
+        "suporte"
+      ]
+    },
+    {
+      "linha": 405,
+      "conteudo": "2️⃣ *ANDROID TV* - TV Box / Smart Android",
+      "comandos": [
+        "OI",
+        "oi"
+      ]
+    },
+    {
+      "linha": 410,
+      "conteudo": "7️⃣ *CELULAR ANDROID* - Smartphone Android",
+      "comandos": [
+        "OI",
+        "oi"
+      ]
+    },
+    {
+      "linha": 413,
+      "conteudo": "📝 Digite *0* para voltar ao menu principal`;",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 418,
+      "conteudo": "async processarSelecaoTutorial(telefone, texto) {",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 428,
+      "conteudo": "nome: 'Android TV / TV Box',",
+      "comandos": [
+        "oi"
+      ]
+    },
+    {
+      "linha": 431,
+      "conteudo": "tipo: 'android'",
+      "comandos": [
+        "oi"
+      ]
+    },
+    {
+      "linha": 458,
+      "conteudo": "nome: 'Celular Android',",
+      "comandos": [
+        "oi"
+      ]
+    },
+    {
+      "linha": 461,
+      "conteudo": "tipo: 'android_mobile'",
+      "comandos": [
+        "oi"
+      ]
+    },
+    {
+      "linha": 471,
+      "conteudo": "const tutorialSelecionado = tutoriaisValidos[texto];",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 473,
+      "conteudo": "if (!tutorialSelecionado) {",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 475,
+      "conteudo": "'❌ Opção inválida. Digite um número de *1* a *8* conforme o menu de tutoriais.\\n\\nDigite *0* para voltar ao menu principal.'",
+      "comandos": [
+        "menu",
+        "menu"
+      ]
+    },
+    {
+      "linha": 481,
+      "conteudo": "const opcoes = `🔧 *INSTALAÇÃO ${tutorialSelecionado.nome.toUpperCase()}* 🔧",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 486,
+      "conteudo": "• Tutorial em vídeo passo a passo",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 487,
+      "conteudo": "• Aplicativo: ${tutorialSelecionado.app}",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 488,
+      "conteudo": "• Suporte via chat",
+      "comandos": [
+        "Suporte"
+      ]
+    },
+    {
+      "linha": 498,
+      "conteudo": "📝 Digite *0* para voltar ao menu principal`;",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 505,
+      "conteudo": "tipoTv: tutorialSelecionado.tipo,",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 506,
+      "conteudo": "tutorial: tutorialSelecionado",
+      "comandos": [
+        "tutorial",
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 510,
+      "conteudo": "async processarOpcaoInstalacao(telefone, texto, tipoTv) {",
+      "comandos": [
+        "oI"
+      ]
+    },
+    {
+      "linha": 512,
+      "conteudo": "const tutorial = userState.tutorial;",
+      "comandos": [
+        "tutorial",
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 516,
+      "conteudo": "let mensagemTutorial = `🎯 *TUTORIAL GRATUITO* 🎯",
+      "comandos": [
+        "Tutorial",
+        "TUTORIAL"
+      ]
+    },
+    {
+      "linha": 518,
+      "conteudo": "📺 *Dispositivo:* ${tutorial.nome}",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 519,
+      "conteudo": "📱 *Aplicativo:* ${tutorial.app}",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 521,
+      "conteudo": "🎬 *VÍDEO TUTORIAL:*",
+      "comandos": [
+        "TUTORIAL"
+      ]
+    },
+    {
+      "linha": 522,
+      "conteudo": "${tutorial.video}`;",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 526,
+      "conteudo": "mensagemTutorial += `",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 532,
+      "conteudo": "✅ Pressione o botão *Menu*",
+      "comandos": [
+        "Menu"
+      ]
+    },
+    {
+      "linha": 542,
+      "conteudo": "🌐 *DNS DISPONÍVEIS (teste um por vez):*",
+      "comandos": [
+        "teste"
+      ]
+    },
+    {
+      "linha": 548,
+      "conteudo": "💡 *DICA:* Se um DNS não funcionar, teste o próximo da lista!",
+      "comandos": [
+        "não",
+        "teste"
+      ]
+    },
+    {
+      "linha": 551,
+      "conteudo": "✅ Instale o app ${tutorial.app} na Smart TV",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 552,
+      "conteudo": "✅ Configure com suas credenciais IPTV",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 553,
+      "conteudo": "✅ Se não funcionar, mude o DNS conforme acima`;",
+      "comandos": [
+        "não"
+      ]
+    },
+    {
+      "linha": 554,
+      "conteudo": "} else if (tipoTv === 'android_mobile') {",
+      "comandos": [
+        "oi"
+      ]
+    },
+    {
+      "linha": 555,
+      "conteudo": "mensagemTutorial += `",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 557,
+      "conteudo": "📋 *PASSO A PASSO CELULAR ANDROID:*",
+      "comandos": [
+        "OI"
+      ]
+    },
+    {
+      "linha": 585,
+      "conteudo": "mensagemTutorial += `",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 618,
+      "conteudo": "• Se não funcionar, vá em Ajustes > Geral > Gerenciamento de Dispositivo`;",
+      "comandos": [
+        "não"
+      ]
+    },
+    {
+      "linha": 620,
+      "conteudo": "mensagemTutorial += `",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 624,
+      "conteudo": "2️⃣ Siga as instruções do tutorial",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 625,
+      "conteudo": "3️⃣ Use suas credenciais IPTV",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 626,
+      "conteudo": "4️⃣ Em caso de dúvidas, digite *2* para suporte`;",
+      "comandos": [
+        "suporte"
+      ]
+    },
+    {
+      "linha": 629,
+      "conteudo": "mensagemTutorial += `",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 631,
+      "conteudo": "✅ *SUAS CREDENCIAIS:*",
+      "comandos": [
+        "CREDENCIAIS"
+      ]
+    },
+    {
+      "linha": 634,
+      "conteudo": "💡 *Dica:* Tenha suas credenciais IPTV em mãos antes de começar!",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 636,
+      "conteudo": "📝 Digite *0* para voltar ao menu principal`;",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 638,
+      "conteudo": "await this.enviarMensagem(telefone, mensagemTutorial);",
+      "comandos": [
+        "Tutorial"
+      ]
+    },
+    {
+      "linha": 644,
+      "conteudo": "📺 *Dispositivo:* ${tutorial.nome}",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 650,
+      "conteudo": "• Teste de funcionamento",
+      "comandos": [
+        "Teste"
+      ]
+    },
+    {
+      "linha": 663,
+      "conteudo": "📝 Digite *0* para voltar ao menu principal`;",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 669,
+      "conteudo": "await this.processarContratacaoTecnico(telefone, tutorial);",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 673,
+      "conteudo": "'❌ Opção inválida. Digite *1* para tutorial gratuito, *2* para instalação técnica ou *0* para voltar ao menu.'",
+      "comandos": [
+        "tutorial",
+        "menu"
+      ]
+    },
+    {
+      "linha": 678,
+      "conteudo": "this.userStates.set(telefone, { step: 'menu' });",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 681,
+      "conteudo": "async processarContratacaoTecnico(telefone, tutorial) {",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 687,
+      "conteudo": "📺 *Serviço:* Instalação ${tutorial.nome}",
+      "comandos": [
+        "tutorial"
+      ]
+    },
+    {
+      "linha": 710,
+      "conteudo": "async mostrarStatus(telefone, clienteId) {",
+      "comandos": [
+        "Status"
+      ]
+    },
+    {
+      "linha": 715,
+      "conteudo": "WHERE cliente_id = ? AND status = 'ativa'",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 721,
+      "conteudo": "'📋 *STATUS DA ASSINATURA*\\n\\n❌ Você não possui assinaturas ativas.\\n\\nDigite *PLANOS* para contratar.'",
+      "comandos": [
+        "STATUS",
+        "não",
+        "PLANOS"
+      ]
+    },
+    {
+      "linha": 726,
+      "conteudo": "let statusMsg = '📋 *STATUS DAS SUAS ASSINATURAS*\\n\\n';",
+      "comandos": [
+        "status",
+        "STATUS"
+      ]
+    },
+    {
+      "linha": 733,
+      "conteudo": "statusMsg += `📦 *Plano:* ${assinatura.plano.toUpperCase()}\\n`;",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 734,
+      "conteudo": "statusMsg += `💰 *Valor:* R$ ${assinatura.valor.toFixed(2)}\\n`;",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 735,
+      "conteudo": "statusMsg += `📅 *Vence em:* ${diasRestantes} dias (${dataVencimento.toLocaleDateString('pt-BR')})\\n`;",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 736,
+      "conteudo": "statusMsg += `✅ *Status:* ${assinatura.status.toUpperCase()}\\n`;",
+      "comandos": [
+        "status",
+        "Status",
+        "status"
+      ]
+    },
+    {
+      "linha": 739,
+      "conteudo": "statusMsg += `👤 *Usuário:* ${assinatura.usuario_iptv}\\n`;",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 740,
+      "conteudo": "statusMsg += `🔐 *Senha:* ${assinatura.senha_iptv}\\n`;",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 743,
+      "conteudo": "statusMsg += '\\n---\\n\\n';",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 746,
+      "conteudo": "statusMsg += '⬅️ Digite *MENU* para voltar';",
+      "comandos": [
+        "status",
+        "MENU"
+      ]
+    },
+    {
+      "linha": 747,
+      "conteudo": "await this.enviarMensagem(telefone, statusMsg);",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 750,
+      "conteudo": "console.error('Erro ao buscar status:', error);",
+      "comandos": [
+        "status"
+      ]
+    },
+    {
+      "linha": 757,
+      "conteudo": "const planosValidos = {",
+      "comandos": [
+        "planos"
+      ]
+    },
+    {
+      "linha": 758,
+      "conteudo": "'1': { nome: 'Teste', valor: 0, duracao: 3, economia: 0, tipo: 'teste' },",
+      "comandos": [
+        "Teste",
+        "teste"
+      ]
+    },
+    {
+      "linha": 765,
+      "conteudo": "const planoSelecionado = planosValidos[texto];",
+      "comandos": [
+        "planoS",
+        "planos"
+      ]
+    },
+    {
+      "linha": 767,
+      "conteudo": "if (!planoSelecionado) {",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 769,
+      "conteudo": "'❌ Opção inválida. Digite um número de *1* a *5* conforme o menu de planos.\\n\\nDigite *0* para voltar ao menu principal.'",
+      "comandos": [
+        "menu",
+        "planos",
+        "menu"
+      ]
+    },
+    {
+      "linha": 775,
+      "conteudo": "if (planoSelecionado.tipo === 'teste') {",
+      "comandos": [
+        "planoS",
+        "teste"
+      ]
+    },
+    {
+      "linha": 779,
+      "conteudo": "this.credentials.saveCredentials(telefone, resp, 'teste');",
+      "comandos": [
+        "teste"
+      ]
+    },
+    {
+      "linha": 786,
+      "conteudo": "this.userStates.set(telefone, { step: 'menu' });",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 794,
+      "conteudo": "const cobranca = await gerarCobrancaPix(cliente, planoSelecionado.tipo);",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 804,
+      "conteudo": "dataVencimento.setDate(dataVencimento.getDate() + planoSelecionado.duracao);",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 808,
+      "conteudo": "planoSelecionado.tipo,",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 809,
+      "conteudo": "planoSelecionado.valor,",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 810,
+      "conteudo": "dataInicio.toISOString().split('T')[0],",
+      "comandos": [
+        "oI"
+      ]
+    },
+    {
+      "linha": 811,
+      "conteudo": "dataVencimento.toISOString().split('T')[0]",
+      "comandos": [
+        "oI"
+      ]
+    },
+    {
+      "linha": 819,
+      "conteudo": "planoSelecionado.valor,",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 822,
+      "conteudo": "new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().split('T')[0]",
+      "comandos": [
+        "oI"
+      ]
+    },
+    {
+      "linha": 827,
+      "conteudo": "if (planoSelecionado.economia > 0) {",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 828,
+      "conteudo": "const valorMensal = planoSelecionado.valor / (planoSelecionado.duracao / 30);",
+      "comandos": [
+        "planoS",
+        "planoS"
+      ]
+    },
+    {
+      "linha": 829,
+      "conteudo": "mensagemEconomia = `💸 *VOCÊ ESTÁ ECONOMIZANDO R$ ${planoSelecionado.economia.toFixed(2)}!*",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 837,
+      "conteudo": "📦 *Plano:* ${planoSelecionado.nome} (${planoSelecionado.duracao} dias)",
+      "comandos": [
+        "planoS",
+        "planoS"
+      ]
+    },
+    {
+      "linha": 838,
+      "conteudo": "💰 *Valor:* R$ ${planoSelecionado.valor.toFixed(2)}",
+      "comandos": [
+        "planoS"
+      ]
+    },
+    {
+      "linha": 845,
+      "conteudo": "• Suporte 24h",
+      "comandos": [
+        "Suporte"
+      ]
+    },
+    {
+      "linha": 874,
+      "conteudo": "this.userStates.set(telefone, { step: 'menu' });",
+      "comandos": [
+        "menu"
+      ]
+    },
+    {
+      "linha": 895,
+      "conteudo": "console.error('Transação não encontrada:', transactionId);",
+      "comandos": [
+        "não"
+      ]
+    },
+    {
+      "linha": 900,
+      "conteudo": "await this.db.atualizarStatusTransacao(transactionId, 'aprovada');",
+      "comandos": [
+        "Status"
+      ]
+    },
+    {
+      "linha": 906,
+      "conteudo": "const credenciais = this.iptvUtils.gerarCredenciais(cliente.telefone);",
+      "comandos": [
+        "credenciais",
+        "Credenciais"
+      ]
+    },
+    {
+      "linha": 909,
+      "conteudo": "const resultadoIPTV = await this.iptvUtils.criarUsuarioIPTV(credenciais, transacao.plano);",
+      "comandos": [
+        "oI",
+        "oI",
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 911,
+      "conteudo": "if (resultadoIPTV.success) {",
+      "comandos": [
+        "oI"
+      ]
+    },
+    {
+      "linha": 913,
+      "conteudo": "await this.db.atualizarCredenciaisIPTV(",
+      "comandos": [
+        "Credenciais"
+      ]
+    },
+    {
+      "linha": 915,
+      "conteudo": "credenciais.usuario,",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 916,
+      "conteudo": "credenciais.senha,",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 917,
+      "conteudo": "credenciais.urlServidor",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 924,
+      "conteudo": "const mensagemCredenciais = this.iptvUtils.formatarMensagemCredenciais(",
+      "comandos": [
+        "Credenciais",
+        "Credenciais"
+      ]
+    },
+    {
+      "linha": 925,
+      "conteudo": "credenciais,",
+      "comandos": [
+        "credenciais"
+      ]
+    },
+    {
+      "linha": 930,
+      "conteudo": "await this.enviarMensagem(cliente.telefone, mensagemCredenciais);",
+      "comandos": [
+        "Credenciais"
+      ]
+    },
+    {
+      "linha": 934,
+      "conteudo": "console.error('Erro ao criar usuário IPTV:', resultadoIPTV.error);",
+      "comandos": [
+        "oI"
+      ]
+    },
+    {
+      "linha": 936,
+      "conteudo": "'❌ Pagamento aprovado, mas houve erro na ativação. Nosso suporte entrará em contato.'",
+      "comandos": [
+        "suporte"
+      ]
+    }
+  ],
+  "errosLogica": [
+    {
+      "linha": 127,
+      "conteudo": "} else if (resp && resp.reason === 'cooldown') {",
+      "problema": "Comparação com texto: 'cooldown'"
+    },
+    {
+      "linha": 152,
+      "conteudo": "if (texto === 'sim' || texto === 'paguei' || texto === '1') {",
+      "problema": "Comparação com texto: 'sim'"
+    },
+    {
+      "linha": 152,
+      "conteudo": "if (texto === 'sim' || texto === 'paguei' || texto === '1') {",
+      "problema": "Comparação com texto: 'paguei'"
+    },
+    {
+      "linha": 162,
+      "conteudo": "if (existing && existing.status === 'processed') {",
+      "problema": "Comparação com texto: 'processed'"
+    },
+    {
+      "linha": 227,
+      "conteudo": "if (texto === 'não' || texto === 'nao' || texto === '2') {",
+      "problema": "Comparação com texto: 'não'"
+    },
+    {
+      "linha": 227,
+      "conteudo": "if (texto === 'não' || texto === 'nao' || texto === '2') {",
+      "problema": "Comparação com texto: 'nao'"
+    },
+    {
+      "linha": 275,
+      "conteudo": "if (texto === 'menu' || texto === 'início' || texto === 'start' || texto === 'oi' || texto === 'olá') {",
+      "problema": "Comparação com texto: 'menu'"
+    },
+    {
+      "linha": 275,
+      "conteudo": "if (texto === 'menu' || texto === 'início' || texto === 'start' || texto === 'oi' || texto === 'olá') {",
+      "problema": "Comparação com texto: 'início'"
+    },
+    {
+      "linha": 275,
+      "conteudo": "if (texto === 'menu' || texto === 'início' || texto === 'start' || texto === 'oi' || texto === 'olá') {",
+      "problema": "Comparação com texto: 'start'"
+    },
+    {
+      "linha": 275,
+      "conteudo": "if (texto === 'menu' || texto === 'início' || texto === 'start' || texto === 'oi' || texto === 'olá') {",
+      "problema": "Comparação com texto: 'oi'"
+    },
+    {
+      "linha": 275,
+      "conteudo": "if (texto === 'menu' || texto === 'início' || texto === 'start' || texto === 'oi' || texto === 'olá') {",
+      "problema": "Comparação com texto: 'olá'"
+    },
+    {
+      "linha": 284,
+      "conteudo": "if (userState.step === 'escolher_plano' || userState.step === 'renovar_plano') {",
+      "problema": "Comparação com texto: 'escolher_plano'"
+    },
+    {
+      "linha": 284,
+      "conteudo": "if (userState.step === 'escolher_plano' || userState.step === 'renovar_plano') {",
+      "problema": "Comparação com texto: 'renovar_plano'"
+    },
+    {
+      "linha": 285,
+      "conteudo": "await this.processarSelecaoPlano(telefone, texto, cliente, userState.step === 'renovar_plano');",
+      "problema": "Comparação com texto: 'renovar_plano'"
+    },
+    {
+      "linha": 290,
+      "conteudo": "if (userState.step === 'escolher_tutorial') {",
+      "problema": "Comparação com texto: 'escolher_tutorial'"
+    },
+    {
+      "linha": 296,
+      "conteudo": "if (userState.step === 'opcao_instalacao') {",
+      "problema": "Comparação com texto: 'opcao_instalacao'"
+    },
+    {
+      "linha": 525,
+      "conteudo": "if (tipoTv === 'samsung') {",
+      "problema": "Comparação com texto: 'samsung'"
+    },
+    {
+      "linha": 554,
+      "conteudo": "} else if (tipoTv === 'android_mobile') {",
+      "problema": "Comparação com texto: 'android_mobile'"
+    },
+    {
+      "linha": 584,
+      "conteudo": "} else if (tipoTv === 'ios_mobile') {",
+      "problema": "Comparação com texto: 'ios_mobile'"
+    },
+    {
+      "linha": 775,
+      "conteudo": "if (planoSelecionado.tipo === 'teste') {",
+      "problema": "Comparação com texto: 'teste'"
+    },
+    {
+      "linha": 781,
+      "conteudo": "} else if (resp && resp.reason === 'cooldown') {",
+      "problema": "Comparação com texto: 'cooldown'"
+    },
+    {
+      "problema": "Estados sem processamento",
+      "estados": [
+        "menu",
+        "escolher_plano"
+      ]
+    }
+  ],
+  "problemas": [],
+  "correcoes": [
+    "Linha 53: Substituir comandos de texto por números (0 para menu)",
+    "Linha 137: Substituir comandos de texto por números (0 para menu)",
+    "Linha 152: Substituir 'sim' por '1'",
+    "Linha 227: Substituir 'não'/'nao' por '2'",
+    "Linha 237: Substituir comandos de texto por números (0 para menu)",
+    "Linha 275: Substituir comandos de texto por números (0 para menu)",
+    "Linha 277: Substituir comandos de texto por números (0 para menu)",
+    "Linha 303: Substituir comandos de texto por números (0 para menu)",
+    "Linha 303: Substituir 'não'/'nao' por '2'",
+    "Linha 308: Substituir comandos de texto por números (0 para menu)",
+    "Linha 323: Substituir comandos de texto por números (0 para menu)",
+    "Linha 325: Substituir comandos de texto por números (0 para menu)",
+    "Linha 372: Substituir comandos de texto por números (0 para menu)",
+    "Linha 413: Substituir comandos de texto por números (0 para menu)",
+    "Linha 475: Substituir comandos de texto por números (0 para menu)",
+    "Linha 498: Substituir comandos de texto por números (0 para menu)",
+    "Linha 548: Substituir 'não'/'nao' por '2'",
+    "Linha 553: Substituir 'não'/'nao' por '2'",
+    "Linha 618: Substituir 'não'/'nao' por '2'",
+    "Linha 636: Substituir comandos de texto por números (0 para menu)",
+    "Linha 663: Substituir comandos de texto por números (0 para menu)",
+    "Linha 673: Substituir comandos de texto por números (0 para menu)",
+    "Linha 678: Substituir comandos de texto por números (0 para menu)",
+    "Linha 721: Substituir 'não'/'nao' por '2'",
+    "Linha 769: Substituir comandos de texto por números (0 para menu)",
+    "Linha 786: Substituir comandos de texto por números (0 para menu)",
+    "Linha 874: Substituir comandos de texto por números (0 para menu)",
+    "Linha 895: Substituir 'não'/'nao' por '2'"
+  ],
+  "estados": [
+    "menu",
+    "escolher_plano",
+    "renovar_plano",
+    "escolher_tutorial",
+    "opcao_instalacao"
+  ],
+  "estadosProcessados": [
+    "renovar_plano",
+    "escolher_tutorial",
+    "opcao_instalacao"
+  ]
+}

@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  iptv-bot:
+    build: .
+    container_name: iptv-bot
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./database:/app/database
+    restart: unless-stopped

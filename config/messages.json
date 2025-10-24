@@ -1,0 +1,8 @@
+{
+  "menu": "🎬 *BEM-VINDO AO IPTV BOT* 🎬\nEscolha uma opção digitando apenas o *NÚMERO*:...",
+  "planos": "📺 *PLANOS DISPONÍVEIS*\n1️⃣ Básico ...",
+  "status_sem_assinatura": "❌ Você não possui assinaturas ativas. Digite *1* para ver planos disponíveis.",
+  "erro_padrao": "❌ Opção inválida. Digite *0* para voltar ao menu principal.",
+  "tutorials": "5️⃣ *TUTORIAIS* - Como instalar IPTV...",
+  "voltar_menu": "Digite *0* para voltar ao menu principal."
+}

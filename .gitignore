@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Runtime data
+/data/
+*.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Screenshots / temp
+screenshots/
+*.png
+
+# WhatsApp session (if stored)
+session*/
+.session*/
+
+# OS files
+.DS_Store
+Thumbs.db
